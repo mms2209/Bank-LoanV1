@@ -29,10 +29,10 @@ const ApiKeyModal: React.FC<ApiKeyModalProps> = ({ isOpen, onClose, onSave, temp
       <div className="bg-slate-100/80 dark:bg-slate-900/70 backdrop-blur-2xl border border-slate-300 dark:border-white/10 rounded-2xl shadow-xl p-8 max-w-lg w-full">
         <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4 flex items-center gap-2">
           <KeyRound className="w-6 h-6 text-sky-500 dark:text-sky-400" />
-          Gemini API Key Required
+          API Key Required
         </h2>
         <p className="text-slate-600 dark:text-slate-400 mb-6">
-          Please provide your Gemini API key to use this application. Your key is stored locally in your browser and is not sent to any server.
+          Please provide your API key to use this application. Your key is stored locally in your browser and is not sent to any server.
         </p>
         <div className="space-y-4">
           <div>
@@ -49,17 +49,6 @@ const ApiKeyModal: React.FC<ApiKeyModalProps> = ({ isOpen, onClose, onSave, temp
             />
           </div>
           {error && <p className="text-red-500 dark:text-red-400 text-sm">{error}</p>}
-          <p className="text-sm text-slate-500">
-            Don't have a key?{' '}
-            <a
-              href="https://aistudio.google.com/app/apikey"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300 underline"
-            >
-              Get one from Google AI Studio
-            </a>
-          </p>
         </div>
         <div className="mt-8 flex justify-end gap-4">
           {hasExistingKey && (
